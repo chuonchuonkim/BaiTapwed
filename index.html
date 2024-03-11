@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="styledemo.css"> -->
+</head>
+
+<body>
+    <div class="container">
+        <ul class="sidebar">
+            <!-- <li>Trang chủ</li> -->
+            <li>Quản lý kỳ thi</li>
+            <li><a href="thongke.html">Thống kê</a> </li>
+        </ul>
+        <div class="content">
+            <table class="first-table">
+                <!-- <th>
+                    <td>Mã kì thi</td>
+                    <td>Tên kì thi</td>
+                    <td>Thời gian bắt đầu</td>
+                    <td>Thời gian kết thúc</td>
+                    <td>Trạng thái</td>
+                    <td>Số lượng sinh viên</td>
+                </th> -->
+                <tr>
+                    <td>Mã kì thi</td>
+                    <td>Tên kì thi</td>
+                    <td>Thời gian bắt đầu</td>
+                    <td>Thời gian kết thúc</td>
+                    <td>Trạng thái</td>
+                    <td>Số lượng sinh viên</td>
+                </tr>
+            </table>
+            <p>
+                <div>
+                    <h3>Bảng thống kê sinh viên</h3>
+                    <p></p>
+                    <div>
+                        <button id="addStudentBtn">Thêm mới</button>
+                        <div id="studentForm" style="display: none;">
+                            <h3>Thêm sinh viên mới</h3>
+                            <form>
+                                <label for="studentID">Mã sinh viên:</label>
+                                <input type="text" id="studentID" name="studentID">
+                                <label for="studentName">Tên sinh viên:</label>
+                                <input type="text" id="studentName" name="studentName">
+                                <button type="submit">Thêm</button>
+                            </form>
+                        </div>
+                    </div>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Mã sinh viên</th>
+                                <th>Tên</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dữ liệu Sinh viên sẽ được thêm vào đây -->
+                            <tr>
+                                <td>SV001</td>
+                                <td>Nguyễn Văn A</td>
+                                <td><button>Sửa</button><button>Xóa</button></td>
+                            </tr>
+                            <tr>
+                                <td>SV002</td>
+                                <td>Trần Thị B</td>
+                                <td><button>Sửa</button><button>Xóa</button></td>
+                            </tr>
+                            <!-- Thêm các dòng tr cho các sinh viên khác nếu cần -->
+                        </tbody>
+                    </table>
+                </div>
+            </p>
+            <p>
+                <div>
+                    <h3>Bảng thống kỳ thi</h3>
+                    <p></p>
+                    <div>
+                        <button id="addExampleBtn">Thêm mới</button>
+                        <div id="ExampleForm" style="display: none;">
+                            <h3>Thêm kỳ thi mới</h3>
+                            <form>
+                                <label for="exampleID">Mã kỳ thi:</label>
+                                <input type="text" id="studentID" name="studentID">
+                                <label for="exampleName">Tên kỳ thi:</label>
+                                <input type="text" id="studentName" name="studentName">
+                                <button type="submit">Thêm</button>
+                            </form>
+                        </div>
+                    </div>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Mã Kì thi</th>
+                                <th>Tên</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dữ liệu Sinh viên sẽ được thêm vào đây -->
+                            <tr>
+                                <td>Ex001</td>
+                                <td>Tiếng anh</td>
+                                <td>
+                                    <button id="RemoveExample">Xóa</button>
+                                    <button  id="AddQuestion"> <a href="quanliskithi.html">Chỉnh sửa câu hỏi</a></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ex002</td>
+                                <td>XSTK</td>
+                                <td><button id="RemoveExample">Xóa</button>
+                                    <button  id="AddQuestion"> <a href="quanliskithi.html">Chỉnh sửa câu hỏi</a></button></td>
+                            </tr>
+                            <div id="EditForm" style="display: none;">
+                                <h3>Sửa kỳ thi</h3>
+                                <form>
+                                    <label for="studentID">Mã kỳ thi:</label>
+                                    <input type="text" id="studentID" name="studentID">
+                                    <label for="studentName">Tên kỳ thi:</label>
+                                    <input type="text" id="studentName" name="studentName">
+                                    <button type="submit">Sửa</button>
+                                </form>
+                            </div>
+                            <div id="RemoveForm" style="display: none;">
+                                <h3>Xóa kỳ thi</h3>
+                                <form>
+                                    <label for="studentID">Mã kỳ thi:</label>
+                                    <input type="text" id="studentID" name="studentID">
+                                    <button type="submit">Xóa</button>
+                                </form>
+                            </div>
+                            <!-- Thêm các dòng tr cho các sinh viên khác nếu cần -->
+                        </tbody>
+                    </table>
+                </div>
+            </p>
+            <p></p>
+            <p>
+                <div>
+                    <h3>Bảng thống kê </h3>
+                    <p></p>
+                    <!-- <p><button>Thêm mới</button></p> -->
+
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Kì thi</th>
+                                <th>Số sinh viên thi</th>
+                                <th>tỉ lệ hoàn thành</th>
+                                <th>điểm trung bình</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dữ liệu Sinh viên sẽ được thêm vào đây -->
+                            <tr>
+                                <td>Giữa kì Toán</td>
+                                <td>12</td>
+                                <td>80</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>Giữa kì Văn</td>
+                                <td>32</td>
+                                <td>90</td>
+                                <td>6</td>
+                            </tr>
+                            <!-- Thêm các dòng tr cho các sinh viên khác nếu cần -->
+                        </tbody>
+                    </table>
+                </div>
+            </p>
+        </div>
+    </div>
+    <script>    
+        document.getElementById("addStudentBtn").addEventListener("click", function () {
+            var studentForm = document.getElementById("studentForm");
+            if (studentForm.style.display === "none" || studentForm.style.display === "") {
+                studentForm.style.display = "block";
+            } else {
+                studentForm.style.display = "none";
+            }
+        });
+    </script>
+    <script>
+        document.getElementById("addExampleBtn").addEventListener("click", function () {
+            var studentForm = document.getElementById("ExampleForm");
+            if (studentForm.style.display === "none" || studentForm.style.display === "") {
+                studentForm.style.display = "block";
+            } else {
+                studentForm.style.display = "none";
+            }
+        });
+    </script>
+    <script>
+        document.getElementById("EditExample").addEventListener("click", function () {
+            var EditForm = document.getElementById("EditForm");
+            if (EditForm.style.display === "none" || EditForm.style.display === "") {
+                EditForm.style.display = "block";
+            } else {
+                EditForm.style.display = "none";
+            }
+        });
+    </script>
+    <script>
+        document.getElementById("RemoveExample").addEventListener("click", function () {
+            var RemoveForm = document.getElementById("RemoveForm");
+            if (RemoveForm.style.display === "none" || RemoveForm.style.display === "") {
+                RemoveForm.style.display = "block";
+            } else {
+                RemoveForm.style.display = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>

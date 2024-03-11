@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Thống Kê Kết Quả Kỳ Thi</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        #chart-container {
+            width: 600px;
+            height: 600px;
+        }
+
+        #chart {
+            border: 1px solid #ccc;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+</head>
+
+<body>
+
+    <h2>Bảng Thống Kê Kết Quả Kỳ Thi</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tổng Số Lần Tham Gia</th>
+                <th>Tỷ Lệ Hoàn Thành (%)</th>
+                <th>Điểm Trung Bình</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>10</td>
+                <td>80%</td>
+                <td>8.5</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>70%</td>
+                <td>7.8</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>90%</td>
+                <td>9.2</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="chart-container">
+        <canvas id="chart" width="600" height="400"></canvas>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('chart').getContext('2d');
+
+        const labels = ['Điểm 1', 'Điểm 2', 'Điểm 3', 'Điểm 4', 'Điểm 5', 'Điểm 6', 'Điểm 7', 'Điểm 8', 'Điểm 9', 'Điểm 10'];
+        const data = [100, 200, 300, 400, 500, 100, 200, 300, 400, 300];
+
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Thống kê điểm',
+                    data: data,
+                    backgroundColor: '#337ab7',
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

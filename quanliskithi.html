@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách Kì thi</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .question-container {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .question-container div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kỳ thi</h1>
+        <form>
+            <div>
+                
+                <div>
+                    <label>Tên kì thi:</label>
+                    <input>
+                </div>
+                <div>
+                    <label>Mô tả:</label>
+                    <input>
+                </div>
+                <div>
+                    <label>Loại kỳ thi:</label>
+                    <select>
+                        <option>Tự do</option>
+                        <option>Thời gian cụ thể</option>
+                    </select>
+                </div>
+            </div>
+            <div class="question-container">
+                <h1>Danh sách câu hỏi</h1>
+                <div>
+                    <div class="question">
+                        <p>Câu hỏi 1: Đâu là thủ đô của Việt Nam?</p>
+                        <ul>
+                            <li><label for="answer1a">Hà Nội</label></li>
+                            <li><label for="answer1a">Sài Gòn</label></li>
+                            <li><label for="answer1a">Hải Phòng</label></li>
+                            <li><label for="answer1a">Ninh Bình</label></li>
+                            <p>Đáp án: A</p>
+                            <button>Xóa câu hỏi</button>
+                        </ul>
+                    </div>
+                    <div class="question">
+                        <p>Câu hỏi 2: Trong hệ mặt trời, hành tinh nào gần mặt trời nhất?</p>
+                        <ul>
+                            <li><label for="answer1a">Trái Đất</label></li>
+                            <li><label for="answer1a">Thiên Vương</label></li>
+                            <li><label for="answer1a">Kim</label></li>
+                            <li><label for="answer1a">Mộc</label></li>
+                            <p>Đáp án: A</p>
+                            <button>Xóa câu hỏi</button>
+                        </ul>
+                    </div>
+                   
+                </div>
+                
+            </div>
+            <form>
+                <h2>Thêm Câu hỏi</h2>
+                <div>
+                    <label>Câu hỏi</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label>A:</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label>B:</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label>C:</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label>D:</label>
+                    <input type="text">
+                </div>
+                <div>
+                    
+                    <p><label >Đáp án:</label><input type="text"> </p>
+                </div>
+            </form>
+        </form>
+        <button>Thêm câu hỏi</button>
+        
+        
+    </div>
+</body>
+</html>
